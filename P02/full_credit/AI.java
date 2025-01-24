@@ -13,7 +13,7 @@ public class AI {
             queries[i] = queries[i - 1];
         }
         queries[0] = userInput;
-        return "Answering now: \"" + userInput + "\"";
+        return "answering now: \"" + userInput + "\"";
     }
 
     public String[] getQueryHistory() {
