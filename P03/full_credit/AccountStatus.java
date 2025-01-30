@@ -1,3 +1,3 @@
 public enum AccountStatus{
-Normal,Mute,Block
+Normal,Mute,Blocked
 };

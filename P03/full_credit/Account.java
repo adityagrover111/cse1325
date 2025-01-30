@@ -18,4 +18,19 @@ public void setStatus(AccountStatus status){
     this.status=status;
 }
 
+public boolean isMuted(){
+    if(status!=AccountStatus.Normal)
+        return true;
+    else 
+      return false;
 }
+
+public boolean isBlocked(){
+    if(status==AccountStatus.Blocked)
+       return true;
+    else 
+       return false;
+}
+
+}
+
