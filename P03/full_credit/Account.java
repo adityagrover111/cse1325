@@ -32,5 +32,12 @@ public boolean isBlocked(){
        return false;
 }
 
+public String toString(){
+    if(status==AccountStatus.Normal)
+      return name + " (" + id + ")";
+    else
+      return name + " (" + id + ") [" + status + "]";
+}
+
 }
 
