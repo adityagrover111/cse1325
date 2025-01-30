@@ -2,7 +2,7 @@ public class Account{
 
 private String name;
 private int id;
-private static int nextID;
+private static int nextID=1;
 private AccountStatus status;
 
 public Account(String name){
