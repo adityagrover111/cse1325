@@ -34,7 +34,8 @@ public class DemoMessage {
         }
         
         Message message = new Message(sender, null, body);
-        System.out.println("\nMessage Created:");
+        System.out.println("\nabUTA YOU™:");
+        System.out.println("Message Created:");
         System.out.println(message);
         
         scanner.close();
