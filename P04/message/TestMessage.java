@@ -1,3 +1,6 @@
+package message;
+import account.Account;
+import account.AccountStatus;
 public class TestMessage {
     private static String stripDate(Message m) {
         String s = m.toString();
