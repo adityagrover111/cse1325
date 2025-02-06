@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.ArrayList;
 
 public class Message {
-    private Account from;
-    private Date date;
-    private Message repliedTo;
-    private ArrayList<Message> replies;
-    private String body;
+    protected Account from;
+    protected Date date;
+    protected Message repliedTo;
+    protected ArrayList<Message> replies;
+    protected String body;
 
     public Message(Account from, Message repliedTo, String body) {
         this.from = from;
