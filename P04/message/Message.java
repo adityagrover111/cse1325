@@ -1,9 +1,18 @@
 package message;
+
 import account.Account;
 import account.AccountStatus;
 import java.util.Date;
 import java.util.ArrayList;
 
+/**
+ * represents message that can be sent from an account. also has a functionality
+ * to reply.
+ * 
+ * @author Aditya Grover
+ * @since 1.0
+ * @version 1.0
+ */
 public class Message {
     protected Account from;
     protected Date date;
@@ -11,6 +20,14 @@ public class Message {
     protected ArrayList<Message> replies;
     protected String body;
 
+    /**
+     * Creates a new message
+     * 
+     * @param from      the sender of the message
+     * @param repliedTo the message thats being replied to
+     * @param body      contens of the message
+     * @since 1.0
+     */
     public Message(Account from, Message repliedTo, String body) {
         this.from = from;
         this.repliedTo = repliedTo;
@@ -23,13 +40,31 @@ public class Message {
         }
     }
 
+    /**
+     * adds a reply to a message
+     * @param reply
+     * @since 1.0
+     */
+
     private void addReply(Message reply) {
         replies.add(reply);
     }
 
+    /**
+     * retrieves the message that this message is replying to 
+     * @return the replied to message, or null if it's an original message
+     * @since 1.0
+     */
     public Message getRepliedTo() {
         return repliedTo;
     }
+
+    /**
+     * gets the reply to a message at specific index
+     * 
+     * @param index
+     * @return null if index invalid or returns the reply at a specific index
+     */
 
     public Message getReply(int index) {
         if (index >= replies.size() || index < 0)
@@ -39,6 +74,13 @@ public class Message {
 
     }
 
+    /**
+     * eturns the string representation of the message with the date, sender,
+     * replies and body.
+     * 
+     * @return a string representation of the message
+     * @since 1.0
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
