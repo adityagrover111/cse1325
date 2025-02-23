@@ -42,6 +42,7 @@ public class Message {
 
     /**
      * adds a reply to a message
+     * 
      * @param reply
      * @since 1.0
      */
@@ -51,7 +52,8 @@ public class Message {
     }
 
     /**
-     * retrieves the message that this message is replying to 
+     * retrieves the message that this message is replying to
+     * 
      * @return the replied to message, or null if it's an original message
      * @since 1.0
      */
@@ -96,7 +98,7 @@ public class Message {
             for (int i = 0; i < replies.size(); i++) {
                 if (i > 0)
                     sb.append(", ");
-                sb.append(replies.get(i).from);
+                sb.append("[").append(i).append("] ").append(replies.get(i).from);
             }
             sb.append("\n");
         }
