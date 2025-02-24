@@ -39,6 +39,11 @@ public class Message {
             repliedTo.addReply(this);
         }
     }
+    
+    public int getNumReplies() {
+        return replies.size();
+    }
+    
 
     /**
      * adds a reply to a message
