@@ -43,6 +43,7 @@ public class Abuta {
         menu.addMenuItem(new MenuItem("Show Replied To", () -> showRepliedTo()));
         menu.addMenuItem(new MenuItem("Add Reply", () -> reply()));
         menu.addMenuItem(new MenuItem("Create New Account", () -> createAccount()));
+        menu.addMenuItem(new MenuItem("Create New Group", () -> createGroup()));
     }
 
     public void mdi() {
@@ -74,7 +75,7 @@ public class Abuta {
     }
 
     private void showReply() {
-        
+
         if (message.getNumReplies() == 0) {
             output = "no replies to show";
         } else if (message.getNumReplies() == 1) {
@@ -83,7 +84,6 @@ public class Abuta {
             int index = Menu.getInt("Which reply (0-" + (message.getNumReplies() - 1) + ")? ");
             if (index >= 0 && index < message.getNumReplies()) {
                 message = message.getReply(index);
-                
             } else {
                 output = "Invalid reply number";
             }
@@ -113,11 +113,19 @@ public class Abuta {
             output = e.getMessage();
         }
     }
+
     private void createAccount() {
         String name = Menu.getString("Enter new account name: ");
         accounts.add(new Account(name));
-        output = "New account " + name +" created successfully";
+        output = "New account " + name + " created successfully";
     }
+
+    private void createGroup() {
+        String name = Menu.getString("Enter new group name: ");
+        groups.add(new Group(name));
+        output = "New group " + name + " created successfully";
+    }
+
     public static void main(String[] args) {
         Abuta app = new Abuta();
         app.mdi();
