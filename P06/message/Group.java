@@ -1,5 +1,9 @@
 package message;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 /**
  * Depicts a group with a name and status showing if it is active or not
  * 
@@ -25,6 +29,16 @@ public class Group {
         }
         this.name = name;
         this.active = true;
+    }
+
+    public Group(BufferedReader br) throws IOException {
+        this.name = br.readLine();
+        this.active = Boolean.parseBoolean(br.readLine());
+    }
+
+    public void save(BufferedWriter bw) throws IOException {
+        bw.write(name + "\n");
+        bw.write(active + "\n");
     }
 
     /**
