@@ -1,5 +1,9 @@
 package account;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 /**
  * depicts an account with a name, unique ID, and status.
  * @author Aditya Grover
@@ -30,6 +34,19 @@ public Account(String name){
    this.id=nextID++;
    this.status=AccountStatus.Normal;
 }
+
+public Account(BufferedReader br) throws IOException {
+        this.name = br.readLine();
+        this.id = Integer.parseInt(br.readLine());
+        nextID = id + 1; 
+        this.status = AccountStatus.valueOf(br.readLine());
+    }
+
+public void save(BufferedWriter bw) throws IOException {
+        bw.write(name + "\n");
+        bw.write(id + "\n");
+        bw.write(status.name() + "\n");
+    }
  /**
      * sets the status of the account
      *
