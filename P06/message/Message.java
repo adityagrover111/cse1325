@@ -3,6 +3,9 @@ package message;
 import account.Account;
 import account.AccountStatus;
 import java.util.Date;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -39,7 +42,47 @@ public class Message {
             repliedTo.addReply(this);
         }
     }
-    
+
+     public Message(BufferedReader br, Message repliedTo) throws IOException {
+        this.from = new Account(br); 
+        this.date = new Date(Long.parseLong(br.readLine())); 
+        this.body = br.readLine();
+        this.repliedTo = repliedTo;
+        this.replies = new ArrayList<>();
+
+        if (repliedTo != null) {
+            repliedTo.addReply(this);
+        }
+
+       
+        int numReplies = Integer.parseInt(br.readLine());
+        for (int i = 0; i < numReplies; i++) {
+            String className = br.readLine(); 
+            Message reply;
+
+            if (className.equals("message.Post")) {
+                reply = new Post(br, this); 
+            } else if (className.equals("message.DirectMessage")) {
+                reply = new DirectMessage(br, this); 
+            } else {
+                throw new IOException("Unknown message type: " + className);
+            }
+
+            replies.add(reply); 
+        }
+    }
+    public void save(BufferedWriter bw) throws IOException {
+        from.save(bw); 
+        bw.write(date.getTime() + "\n");
+        bw.write(body + "\n");
+
+       
+        bw.write(replies.size() + "\n");
+        for (Message reply : replies) {
+            bw.write(reply.getClass().getName() + "\n"); 
+            reply.save(bw); 
+        }
+    }
     public int getNumReplies() {
         return replies.size();
     }

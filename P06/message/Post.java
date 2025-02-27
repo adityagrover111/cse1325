@@ -1,4 +1,8 @@
 package message;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 import account.Account;
 /**
  * depicts a post of an account
@@ -20,6 +24,18 @@ public class Post extends Message {
     public Post(Account from, Group group, Message repliedTo, String body){
         super(from, repliedTo, body);
         this.group=group;
+    }
+
+    public Post(BufferedReader br, Message repliedTo) throws IOException {
+        super(br, repliedTo); 
+        this.group = new Group(br); 
+    }
+
+    @Override
+    public void save(BufferedWriter bw) throws IOException {
+        bw.write(getClass().getName() + "\n"); 
+        super.save(bw); 
+        group.save(bw); 
     }
 /**
  * returns the string representation of the post
