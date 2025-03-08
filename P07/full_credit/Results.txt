@@ -15,430 +15,428 @@ java turing/BreakEnigmaFile 76
 
 QUESTION 2: Provide the full output (including the time command) for your program, with 1 to 16 threads. **Ensure that the result is the same for all 16 runs.** With bash, you can run all of these with a single command if you like, replacing "76" with whatever command line arguments you identified in QUESTION 1: 
 
-for i in {1..16} ; do echo ; echo $i Threads; time java turing/BreakEnigmaFile 76 $i ; done
 
 
 
 
-ricegf@antares:~/dev/202501/P07/full_credit$ for i in {1..16} ; do echo ; echo $i Threads; time java turing/BreakEnigmaFile 76 $i ; done
+$ for i in {1..16} ; do echo ; echo $i Threads; time java turing.BreakEnigmaFile 76 $i ; done
 
 1 Threads
-+++ Starting thread 0
-### Finished thread 0
++++Starting thread 0
+###Ending thread 0
 
 
 VERIFY checksum of all decryptions is -1722095701
-[2]-  Done                    xdg-open "$file"
 
-real	0m47.059s
-user	0m47.277s
-sys	0m0.208s
+real    1m6.017s
+user    0m0.031s
+sys     0m0.031s
 
 2 Threads
-+++ Starting thread 0
-+++ Starting thread 1
-### Finished thread 1
-### Finished thread 0
++++Starting thread 1
++++Starting thread 0
+###Ending thread 1
+###Ending thread 0
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m26.930s
-user	0m49.808s
-sys	0m0.188s
+real    0m27.124s
+user    0m0.015s
+sys     0m0.031s
 
 3 Threads
-+++ Starting thread 2
-+++ Starting thread 1
-+++ Starting thread 0
-### Finished thread 0
-### Finished thread 1
-### Finished thread 2
++++Starting thread 0
++++Starting thread 1
++++Starting thread 2
+###Ending thread 0
+###Ending thread 1
+###Ending thread 2
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m18.000s
-user	0m47.252s
-sys	0m0.213s
+real    0m20.500s
+user    0m0.031s
+sys     0m0.031s
 
 4 Threads
-+++ Starting thread 0
-+++ Starting thread 2
-+++ Starting thread 1
-+++ Starting thread 3
-### Finished thread 0
-### Finished thread 3
-### Finished thread 1
-### Finished thread 2
++++Starting thread 0
++++Starting thread 1
++++Starting thread 2
++++Starting thread 3
+###Ending thread 0
+###Ending thread 3
+###Ending thread 1
+###Ending thread 2
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m21.401s
-user	0m50.303s
-sys	0m0.241s
+real    0m30.380s
+user    0m0.015s
+sys     0m0.015s
 
 5 Threads
-+++ Starting thread 4
-+++ Starting thread 0
-+++ Starting thread 2
-+++ Starting thread 1
-+++ Starting thread 3
-### Finished thread 3
-### Finished thread 2
-### Finished thread 1
-### Finished thread 0
-### Finished thread 4
++++Starting thread 0
++++Starting thread 4
++++Starting thread 3
++++Starting thread 2
++++Starting thread 1
+###Ending thread 3
+###Ending thread 2
+###Ending thread 1
+###Ending thread 0
+###Ending thread 4
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m21.738s
-user	0m47.144s
-sys	0m0.261s
+real    0m49.440s
+user    0m0.046s
+sys     0m0.015s
 
 6 Threads
-+++ Starting thread 1
-+++ Starting thread 2
-+++ Starting thread 0
-+++ Starting thread 5
-+++ Starting thread 3
-+++ Starting thread 4
-### Finished thread 0
-### Finished thread 5
-### Finished thread 1
-### Finished thread 3
-### Finished thread 4
-### Finished thread 2
++++Starting thread 2
++++Starting thread 5
++++Starting thread 3
++++Starting thread 1
++++Starting thread 0
++++Starting thread 4
+###Ending thread 0
+###Ending thread 1
+###Ending thread 5
+###Ending thread 3
+###Ending thread 4
+###Ending thread 2
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m12.007s
-user	0m48.331s
-sys	0m0.172s
+real    0m18.680s
+user    0m0.015s
+sys     0m0.015s
 
 7 Threads
-+++ Starting thread 4
-+++ Starting thread 3
-+++ Starting thread 0
-+++ Starting thread 1
-+++ Starting thread 2
-+++ Starting thread 5
-+++ Starting thread 6
-### Finished thread 5
-### Finished thread 3
-### Finished thread 2
-### Finished thread 1
-### Finished thread 0
-### Finished thread 6
-### Finished thread 4
++++Starting thread 1
++++Starting thread 2
++++Starting thread 3
++++Starting thread 6
++++Starting thread 4
++++Starting thread 5
++++Starting thread 0
+###Ending thread 5
+###Ending thread 3
+###Ending thread 2
+###Ending thread 1
+###Ending thread 0
+###Ending thread 6
+###Ending thread 4
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m15.633s
-user	0m51.569s
-sys	0m0.308s
+real    0m19.651s
+user    0m0.000s
+sys     0m0.031s
 
 8 Threads
-+++ Starting thread 3
-+++ Starting thread 4
-+++ Starting thread 2
-+++ Starting thread 1
-+++ Starting thread 0
-+++ Starting thread 7
-+++ Starting thread 5
-+++ Starting thread 6
-### Finished thread 4
-### Finished thread 1
-### Finished thread 0
-### Finished thread 7
-### Finished thread 3
-### Finished thread 6
-### Finished thread 5
-### Finished thread 2
++++Starting thread 5
++++Starting thread 4
++++Starting thread 3
++++Starting thread 0
++++Starting thread 1
++++Starting thread 7
++++Starting thread 6
++++Starting thread 2
+###Ending thread 4
+###Ending thread 1
+###Ending thread 7
+###Ending thread 0
+###Ending thread 3
+###Ending thread 6
+###Ending thread 5
+###Ending thread 2
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m13.447s
-user	0m54.179s
-sys	0m0.300s
+real    0m16.415s
+user    0m0.015s
+sys     0m0.015s
 
 9 Threads
-+++ Starting thread 2
-+++ Starting thread 1
-+++ Starting thread 0
-+++ Starting thread 4
-+++ Starting thread 7
-+++ Starting thread 5
-+++ Starting thread 3
-+++ Starting thread 6
-+++ Starting thread 8
-### Finished thread 5
-### Finished thread 3
-### Finished thread 1
-### Finished thread 0
-### Finished thread 4
-### Finished thread 8
-### Finished thread 6
-### Finished thread 7
-### Finished thread 2
++++Starting thread 5
++++Starting thread 3
++++Starting thread 6
++++Starting thread 8
++++Starting thread 4
++++Starting thread 1
++++Starting thread 0
++++Starting thread 2
++++Starting thread 7
+###Ending thread 3
+###Ending thread 5
+###Ending thread 1
+###Ending thread 0
+###Ending thread 4
+###Ending thread 8
+###Ending thread 6
+###Ending thread 7
+###Ending thread 2
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m11.934s
-user	0m53.054s
-sys	0m0.304s
+real    0m15.486s
+user    0m0.000s
+sys     0m0.031s
 
 10 Threads
-+++ Starting thread 8
-+++ Starting thread 1
-+++ Starting thread 7
-+++ Starting thread 4
-+++ Starting thread 0
-+++ Starting thread 3
-+++ Starting thread 2
-+++ Starting thread 6
-+++ Starting thread 9
-+++ Starting thread 5
-### Finished thread 3
-### Finished thread 8
-### Finished thread 6
-### Finished thread 5
-### Finished thread 2
-### Finished thread 7
-### Finished thread 1
-### Finished thread 0
-### Finished thread 9
-### Finished thread 4
++++Starting thread 7
++++Starting thread 4
++++Starting thread 6
++++Starting thread 1
++++Starting thread 2
++++Starting thread 8
++++Starting thread 9
++++Starting thread 0
++++Starting thread 3
++++Starting thread 5
+###Ending thread 3
+###Ending thread 6
+###Ending thread 8
+###Ending thread 5
+###Ending thread 2
+###Ending thread 7
+###Ending thread 1
+###Ending thread 0
+###Ending thread 9
+###Ending thread 4
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m13.027s
-user	0m53.417s
-sys	0m0.357s
+real    0m16.653s
+user    0m0.015s
+sys     0m0.015s
 
 11 Threads
-+++ Starting thread 10
-+++ Starting thread 9
-+++ Starting thread 8
-+++ Starting thread 6
-+++ Starting thread 1
-+++ Starting thread 4
-+++ Starting thread 3
-+++ Starting thread 2
-+++ Starting thread 5
-+++ Starting thread 0
-+++ Starting thread 7
-### Finished thread 7
-### Finished thread 0
-### Finished thread 10
-### Finished thread 2
-### Finished thread 9
-### Finished thread 1
-### Finished thread 6
-### Finished thread 5
-### Finished thread 3
-### Finished thread 4
-### Finished thread 8
++++Starting thread 4
++++Starting thread 1
++++Starting thread 10
++++Starting thread 6
++++Starting thread 3
++++Starting thread 9
++++Starting thread 0
++++Starting thread 8
++++Starting thread 5
++++Starting thread 7
++++Starting thread 2
+###Ending thread 7
+###Ending thread 0
+###Ending thread 10
+###Ending thread 2
+###Ending thread 9
+###Ending thread 1
+###Ending thread 6
+###Ending thread 5
+###Ending thread 3
+###Ending thread 4
+###Ending thread 8
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m11.990s
-user	0m55.752s
-sys	0m0.382s
+real    0m15.697s
+user    0m0.015s
+sys     0m0.031s
 
 12 Threads
-+++ Starting thread 5
-+++ Starting thread 4
-+++ Starting thread 0
-+++ Starting thread 11
-+++ Starting thread 3
-+++ Starting thread 1
-+++ Starting thread 2
-+++ Starting thread 7
-+++ Starting thread 8
-+++ Starting thread 6
-+++ Starting thread 10
-+++ Starting thread 9
-### Finished thread 3
-### Finished thread 8
-### Finished thread 6
-### Finished thread 5
-### Finished thread 4
-### Finished thread 0
-### Finished thread 7
-### Finished thread 1
-### Finished thread 11
-### Finished thread 10
-### Finished thread 9
-### Finished thread 2
++++Starting thread 8
++++Starting thread 0
++++Starting thread 10
++++Starting thread 9
++++Starting thread 1
++++Starting thread 7
++++Starting thread 5
++++Starting thread 6
++++Starting thread 2
++++Starting thread 3
++++Starting thread 11
++++Starting thread 4
+###Ending thread 3
+###Ending thread 8
+###Ending thread 6
+###Ending thread 5
+###Ending thread 4
+###Ending thread 0
+###Ending thread 1
+###Ending thread 7
+###Ending thread 11
+###Ending thread 10
+###Ending thread 9
+###Ending thread 2
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m12.144s
-user	0m53.651s
-sys	0m0.265s
+real    0m16.562s
+user    0m0.000s
+sys     0m0.000s
 
 13 Threads
-+++ Starting thread 10
-+++ Starting thread 4
-+++ Starting thread 11
-+++ Starting thread 9
-+++ Starting thread 8
-+++ Starting thread 1
-+++ Starting thread 2
-+++ Starting thread 0
-+++ Starting thread 5
-+++ Starting thread 3
-+++ Starting thread 12
-+++ Starting thread 7
-+++ Starting thread 6
-### Finished thread 11
-### Finished thread 3
-### Finished thread 8
-### Finished thread 0
-### Finished thread 1
-### Finished thread 12
-### Finished thread 10
-### Finished thread 2
-### Finished thread 7
-### Finished thread 6
-### Finished thread 5
-### Finished thread 4
-### Finished thread 9
++++Starting thread 0
++++Starting thread 2
++++Starting thread 4
++++Starting thread 10
++++Starting thread 12
++++Starting thread 3
++++Starting thread 11
++++Starting thread 1
++++Starting thread 7
++++Starting thread 8
++++Starting thread 9
++++Starting thread 5
++++Starting thread 6
+###Ending thread 11
+###Ending thread 3
+###Ending thread 0
+###Ending thread 8
+###Ending thread 1
+###Ending thread 12
+###Ending thread 10
+###Ending thread 2
+###Ending thread 7
+###Ending thread 6
+###Ending thread 5
+###Ending thread 4
+###Ending thread 9
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m14.278s
-user	0m56.878s
-sys	0m0.405s
+real    0m16.894s
+user    0m0.000s
+sys     0m0.015s
 
 14 Threads
-+++ Starting thread 12
-+++ Starting thread 13
-+++ Starting thread 10
-+++ Starting thread 11
-+++ Starting thread 3
-+++ Starting thread 1
-+++ Starting thread 7
-+++ Starting thread 8
-+++ Starting thread 9
-+++ Starting thread 5
-+++ Starting thread 2
-+++ Starting thread 4
-+++ Starting thread 0
-+++ Starting thread 6
-### Finished thread 12
-### Finished thread 9
-### Finished thread 7
-### Finished thread 10
-### Finished thread 6
-### Finished thread 3
-### Finished thread 8
-### Finished thread 5
-### Finished thread 2
-### Finished thread 11
-### Finished thread 1
-### Finished thread 0
-### Finished thread 13
-### Finished thread 4
++++Starting thread 10
++++Starting thread 11
++++Starting thread 8
++++Starting thread 3
++++Starting thread 12
++++Starting thread 7
++++Starting thread 4
++++Starting thread 9
++++Starting thread 2
++++Starting thread 6
++++Starting thread 0
++++Starting thread 5
++++Starting thread 13
++++Starting thread 1
+###Ending thread 12
+###Ending thread 7
+###Ending thread 9
+###Ending thread 10
+###Ending thread 6
+###Ending thread 3
+###Ending thread 8
+###Ending thread 5
+###Ending thread 2
+###Ending thread 11
+###Ending thread 1
+###Ending thread 0
+###Ending thread 13
+###Ending thread 4
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m12.671s
-user	0m58.091s
-sys	0m0.309s
+real    0m15.323s
+user    0m0.015s
+sys     0m0.030s
 
 15 Threads
-+++ Starting thread 3
-+++ Starting thread 5
-+++ Starting thread 2
-+++ Starting thread 8
-+++ Starting thread 11
-+++ Starting thread 12
-+++ Starting thread 1
-+++ Starting thread 14
-+++ Starting thread 13
-+++ Starting thread 0
-+++ Starting thread 9
-+++ Starting thread 10
-+++ Starting thread 6
-+++ Starting thread 4
-+++ Starting thread 7
-### Finished thread 8
-### Finished thread 3
-### Finished thread 6
-### Finished thread 5
-### Finished thread 13
-### Finished thread 0
-### Finished thread 2
-### Finished thread 12
-### Finished thread 4
-### Finished thread 1
-### Finished thread 7
-### Finished thread 11
-### Finished thread 10
-### Finished thread 9
-### Finished thread 14
++++Starting thread 1
++++Starting thread 2
++++Starting thread 12
++++Starting thread 9
++++Starting thread 4
++++Starting thread 13
++++Starting thread 7
++++Starting thread 5
++++Starting thread 6
++++Starting thread 0
++++Starting thread 11
++++Starting thread 10
++++Starting thread 3
++++Starting thread 8
++++Starting thread 14
+###Ending thread 8
+###Ending thread 3
+###Ending thread 5
+###Ending thread 13
+###Ending thread 2
+###Ending thread 6
+###Ending thread 0
+###Ending thread 1
+###Ending thread 4
+###Ending thread 12
+###Ending thread 7
+###Ending thread 11
+###Ending thread 10
+###Ending thread 9
+###Ending thread 14
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m13.574s
-user	0m58.323s
-sys	0m0.385s
+real    0m15.854s
+user    0m0.031s
+sys     0m0.015s
 
 16 Threads
-+++ Starting thread 9
-+++ Starting thread 14
-+++ Starting thread 2
-+++ Starting thread 8
-+++ Starting thread 13
-+++ Starting thread 0
-+++ Starting thread 6
-+++ Starting thread 5
-+++ Starting thread 10
-+++ Starting thread 1
-+++ Starting thread 7
-+++ Starting thread 3
-+++ Starting thread 4
-+++ Starting thread 15
-+++ Starting thread 12
-+++ Starting thread 11
-### Finished thread 15
-### Finished thread 4
-### Finished thread 12
-### Finished thread 2
-### Finished thread 14
-### Finished thread 9
-### Finished thread 1
-### Finished thread 11
-### Finished thread 8
-### Finished thread 0
-### Finished thread 3
-### Finished thread 13
-### Finished thread 7
-### Finished thread 6
-### Finished thread 5
-### Finished thread 10
++++Starting thread 14
++++Starting thread 4
++++Starting thread 12
++++Starting thread 9
++++Starting thread 5
++++Starting thread 2
++++Starting thread 3
++++Starting thread 13
++++Starting thread 1
++++Starting thread 0
++++Starting thread 8
++++Starting thread 7
++++Starting thread 11
++++Starting thread 10
++++Starting thread 6
++++Starting thread 15
+###Ending thread 15
+###Ending thread 4
+###Ending thread 12
+###Ending thread 2
+###Ending thread 9
+###Ending thread 14
+###Ending thread 1
+###Ending thread 11
+###Ending thread 8
+###Ending thread 0
+###Ending thread 13
+###Ending thread 3
+###Ending thread 7
+###Ending thread 6
+###Ending thread 5
+###Ending thread 10
 
 
 VERIFY checksum of all decryptions is -1722095701
 
-real	0m13.313s
-user	1m1.334s
-sys	0m0.489s
-ricegf@antares:~/dev/202501/P07/full_credit$ 
+real    0m15.141s
+user    0m0.000s
+sys     0m0.015s
+
 
 
 
