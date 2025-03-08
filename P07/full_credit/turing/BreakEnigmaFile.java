@@ -112,10 +112,10 @@ public class BreakEnigmaFile {
   // to solve encrypteds indices 0, 5, 10, 15, ... until the end.
   public void breakManager(int index, int numThreads) {
     for (int i = index; i < encrypteds.size(); i += numThreads) {
-        EncryptedPair pair = encrypteds.get(i);
-        breakIt(pair.encrypted, pair.decryptedHashcode);
+      EncryptedPair pair = encrypteds.get(i);
+      breakIt(pair.encrypted, pair.decryptedHashcode);
     }
-}
+  }
   // End section to be rewritten (but see another small section below!)
   // ==================================================================
 
@@ -151,11 +151,9 @@ public class BreakEnigmaFile {
                       String decrypted = (new Enigma(setting)).encrypt(text);
 
                       if (decrypted.hashCode() == hashcode) {
-                        // =======================================
-                        // Protect hashCodeSum from data corruption!
-                        hashCodeSum += decrypted.hashCode(); // NOT threadsafe!
-                        // End data protection region
-                        // =======================================
+                        synchronized (BreakEnigmaFile.class) {
+                          hashCodeSum += hashcode;
+                        }
                         return;
                       }
                     }
